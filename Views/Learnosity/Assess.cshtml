@@ -1,0 +1,10 @@
+
+    <div id="learnosity_assess"></div>
+    <script src="https://items.learnosity.com/?v2024.1.LTS"></script>
+    <script>
+        var initializationObject = @Html.Raw(ViewBag.SignedRequest);
+        
+        var itemsApp=LearnosityItems.init(initializationObject);
+        
+    </script>
+

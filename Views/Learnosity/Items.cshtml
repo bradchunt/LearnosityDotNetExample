@@ -1,0 +1,12 @@
+
+
+
+    <h1>Item Bank</h1>
+    <div id="learnosity-author"></div>
+
+    <script src="https://authorapi.learnosity.com/?v2024.1.LTS"></script>
+    <script>
+        var initializationObject = @Html.Raw(ViewBag.SignedRequest);
+        
+        var authorApp=LearnosityAuthor.init(initializationObject);
+    </script>

@@ -1,0 +1,11 @@
+
+   <span class="learnosity-report" id="session-detail"></span>
+    <script src="https://reports.learnosity.com/?v2024.1.LTS"></script>
+    <script>
+        var initializationObject = @Html.Raw(ViewBag.SignedRequest);
+        LearnosityReports.init(initializationObject, {
+            readyListener: function () {
+                console.log('Reports API is ready!');
+            }
+        });
+    </script>
