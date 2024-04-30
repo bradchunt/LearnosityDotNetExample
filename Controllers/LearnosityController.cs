@@ -74,17 +74,16 @@ public class LearnosityController: Controller
             security.set("domain", domain);
 
             JsonObject request = new JsonObject();
-            request.set("name", "Staar English Practice Test");     //https://reference.learnosity.com/items-api/initialization/name
-            request.set("activity_template_id", "bh-staar-eng1");   //https://reference.learnosity.com/items-api/initialization/activity_template_id
+            request.set("name", "Exploring Planets");               //https://reference.learnosity.com/items-api/initialization/name
+            request.set("activity_template_id", "demo-activity-1"); //https://reference.learnosity.com/items-api/initialization/activity_template_id
             request.set("user_id", userId);                         //https://reference.learnosity.com/items-api/initialization/user_id
             request.set("rendering_type", "assess");                //https://reference.learnosity.com/items-api/initialization/rendering_type
             request.set("type", "submit_practice");                 //https://reference.learnosity.com/items-api/initialization/type
-            request.set("activity_id", "1stPeriodEnglish"); ;       //https://reference.learnosity.com/items-api/initialization/activity_id
+            request.set("activity_id", "1stPeriodScience"); ;       //https://reference.learnosity.com/items-api/initialization/activity_id
             request.set("session_id",sessionId);                    //https://reference.learnosity.com/items-api/initialization/session_id
 
 
             //https://reference.learnosity.com/items-api/initialization/config.configuration.onsubmit_redirect_url
-
             JsonObject configuration = new JsonObject();
             configuration.set("onsubmit_redirect_url", String.Format("/Learnosity/Reports?sessionid={0}&userid={1}", sessionId,userId)); 
 
